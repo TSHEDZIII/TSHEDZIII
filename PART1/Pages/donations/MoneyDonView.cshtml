@@ -1,0 +1,68 @@
+﻿
+@model PART1.Pages.donations.MoneyDonViewModel
+
+
+
+
+<ul class="navbar-nav flex-grow-1">
+    <li class="nav-item">
+
+    </li>
+    
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-page="/MonetaryDonIndex">MonetaryDonation</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-page="/ChoiceIndex">CHOICE</a>
+    </li>
+
+    
+    </align>
+
+
+    </div>
+    </header>
+
+
+
+
+
+
+
+<p>
+    
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MonetaryDonation[0].Date)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.MonetaryDonation[0].Amount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.MonetaryDonation) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

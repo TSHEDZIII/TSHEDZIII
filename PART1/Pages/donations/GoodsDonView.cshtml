@@ -1,0 +1,71 @@
+﻿
+@model PART1.Pages.donations.GoodsDonViewModel
+
+
+
+<div class=" navbar-collapse collapse d-sm-inline-flex justify-content-between">
+
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-page="/GoodsDonIndex">GoodsDonation</a>
+        </li>
+
+       
+
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-page="/ChoiceIndex">CHOICE</a>
+        </li>
+
+        
+
+
+</div>
+</header>
+
+
+
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GoodsDonation[0].DESCRIPTION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoodsDonation[0].CATEGORY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoodsDonation[0].Number_of_items)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.GoodsDonation) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DESCRIPTION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CATEGORY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number_of_items)
+            </td>
+            
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Date">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Date">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Date">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

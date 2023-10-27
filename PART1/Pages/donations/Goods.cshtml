@@ -1,0 +1,82 @@
+﻿
+@model PART1.Pages.donations.GoodsModel
+
+<h4>GoodsClass</h4>
+
+<div class=" navbar-collapse collapse d-sm-inline-flex justify-content-between">
+
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+
+        </li>
+
+
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-page="/ChoiceIndex">CHOICE</a>
+        </li>
+
+<hr />
+<div class="row">
+    <div class="col-md-10">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="GoodsClass.DISASTER_LOCATION" class="control-label"></label>
+                <input asp-for="GoodsClass.DISASTER_LOCATION" class="form-control" />
+                <span asp-validation-for="GoodsClass.DISASTER_LOCATION" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <label asp-for="GoodsClass.DISASTER_NAME" class="control-label"></label>
+                <input asp-for="GoodsClass.DISASTER_NAME" class="form-control" />
+                <span asp-validation-for="GoodsClass.DISASTER_NAME" class="text-danger"></span>
+            </div>
+
+
+
+
+
+            <div class="form-group">
+                <label asp-for="GoodsClass.GOODSNAME" class="control-label"></label>
+                <input asp-for="GoodsClass.GOODSNAME" class="form-control" />
+                <span asp-validation-for="GoodsClass.GOODSNAME" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="GoodsClass.QUANTITY" class="control-label"></label>
+                <input asp-for="GoodsClass.QUANTITY" class="form-control" />
+                <span asp-validation-for="GoodsClass.QUANTITY" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="GoodsClass.IsActive" /> @Html.DisplayNameFor(model => model.GoodsClass.IsActive)
+                </label>
+            </div>
+
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="GoodsClass.IsAllocated" /> @Html.DisplayNameFor(model => model.GoodsClass.IsAllocated)
+                </label>
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="ALLOCATE" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="LOGINDEX">LOGIN</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

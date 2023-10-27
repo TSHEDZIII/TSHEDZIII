@@ -1,0 +1,58 @@
+﻿@page
+@model PART1.Pages.donations.GOODSALLOModel
+
+<h4>GOODSALLOCATION</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="GOODSALLOCATION.DISASTER_LOCATION" class="control-label"></label>
+                <input asp-for="GOODSALLOCATION.DISASTER_LOCATION" class="form-control" />
+                <span asp-validation-for="GOODSALLOCATION.DISASTER_LOCATION" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GOODSALLOCATION.DISASTER_NAME" class="control-label"></label>
+                <input asp-for="GOODSALLOCATION.DISASTER_NAME" class="form-control" />
+                <span asp-validation-for="GOODSALLOCATION.DISASTER_NAME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GOODSALLOCATION.ALLOCATE_GOODS" class="control-label"></label>
+                <input asp-for="GOODSALLOCATION.ALLOCATE_GOODS" class="form-control" />
+                <span asp-validation-for="GOODSALLOCATION.ALLOCATE_GOODS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GOODSALLOCATION.GOODSNAME" class="control-label"></label>
+                <input asp-for="GOODSALLOCATION.GOODSNAME" class="form-control" />
+                <span asp-validation-for="GOODSALLOCATION.GOODSNAME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GOODSALLOCATION.QUANTITY" class="control-label"></label>
+                <input asp-for="GOODSALLOCATION.QUANTITY" class="form-control" />
+                <span asp-validation-for="GOODSALLOCATION.QUANTITY" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="GOODSALLOCATION.IsActive" /> @Html.DisplayNameFor(model => model.GOODSALLOCATION.IsActive)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="GOODSALLOCATION.IsAllocated" /> @Html.DisplayNameFor(model => model.GOODSALLOCATION.IsAllocated)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

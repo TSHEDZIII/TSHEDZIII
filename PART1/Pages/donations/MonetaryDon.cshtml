@@ -1,0 +1,66 @@
+﻿
+@model PART1.Pages.donations.MonetaryDonModel
+
+<h4>MonetaryDonation</h4>
+
+<div class=" navbar-collapse collapse d-sm-inline-flex justify-content-between">
+
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+
+        </li>
+       
+
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-page="/ChoiceIndex">CHOICE</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-page="/MoneDonViewIndex">MonetaryDonationView</a>
+        </li>
+
+        
+        </align>
+
+
+</div>
+</header>
+
+
+
+
+
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MonetaryDonation.Date" class="control-label"></label>
+                <input asp-for="MonetaryDonation.Date" class="form-control" />
+                <span asp-validation-for="MonetaryDonation.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                
+            </div>
+            <div class="form-group">
+                <label asp-for="MonetaryDonation.Amount" class="control-label"></label>
+                <input asp-for="MonetaryDonation.Amount" class="form-control" />
+                <span asp-validation-for="MonetaryDonation.Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="LOGINDEX">LOGIN</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

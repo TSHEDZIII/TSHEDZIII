@@ -1,0 +1,55 @@
+﻿
+@model PART1.Pages.donations.DisasterViewModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-page="/DisasterIndex">DISASTER</a>
+
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-page="/ChoiceIndex">CHOICE</a>
+    </li>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DISASTER[0].StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DISASTER[0].EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DISASTER[0].LOCATION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DISASTER[0].DESCRIPTION)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.DISASTER) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LOCATION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DESCRIPTION)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

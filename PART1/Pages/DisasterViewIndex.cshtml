@@ -1,0 +1,12 @@
+﻿@page
+@model PART1.Pages.donations.DisasterViewModel
+@{
+
+    ViewData["Title"] = "DisasterView";
+}
+
+<div class="text-center">
+    @await Html.PartialAsync("/Pages/donations/DisasterView.cshtml", Model)
+
+   
+</div>

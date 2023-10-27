@@ -1,0 +1,73 @@
+﻿
+@model PART1.Pages.donations.GoodsDonModel
+
+<h4>GoodsDonation</h4>
+
+<div class=" navbar-collapse collapse d-sm-inline-flex justify-content-between">
+
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+
+        </li>
+        
+
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-page="/ChoiceIndex">CHOICE</a>
+        </li>
+
+        
+
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-page="/GoodsDonViewIndex">GoodsDonationView</a>
+        </li>
+
+
+
+</div>
+</header>
+
+
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="GoodsDonation.Date" class="control-label"></label>
+                <input asp-for="GoodsDonation.Date" class="form-control" />
+                <span asp-validation-for="GoodsDonation.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GoodsDonation.DESCRIPTION" class="control-label"></label>
+                <input asp-for="GoodsDonation.DESCRIPTION" class="form-control" />
+                <span asp-validation-for="GoodsDonation.DESCRIPTION" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GoodsDonation.CATEGORY" class="control-label"></label>
+                <input asp-for="GoodsDonation.CATEGORY" class="form-control" />
+                <span asp-validation-for="GoodsDonation.CATEGORY" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GoodsDonation.Number_of_items" class="control-label"></label>
+                <input asp-for="GoodsDonation.Number_of_items" class="form-control" />
+                <span asp-validation-for="GoodsDonation.Number_of_items" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+               
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="LOGINDEX">LOGIN</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

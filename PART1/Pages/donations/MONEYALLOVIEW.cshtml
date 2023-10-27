@@ -1,0 +1,51 @@
+﻿@page
+@model PART1.Pages.donations.MONEYALLOVIEWModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MONEYALLOCATIONS[0].DISASTER_LOCATION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MONEYALLOCATIONS[0].DISASTER_DESCRIPTION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MONEYALLOCATIONS[0].ALLOCATE_FUNDS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MONEYALLOCATIONS[0].IsActive)
+            </th>
+
+            
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.MONEYALLOCATIONS) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DISASTER_LOCATION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DISASTER_DESCRIPTION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ALLOCATE_FUNDS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

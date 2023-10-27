@@ -1,0 +1,36 @@
+﻿
+@model PART1.Pages.donations.loginDonViewModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LOGIN[0].USERNAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LOGIN[0].PASSWORD)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.LOGIN) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.USERNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PASSWORD)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.LOGINID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.LOGINID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.LOGINID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,62 @@
+﻿@page
+@model PART1.Pages.donations.GoodsViewModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GoodsClass[0].DISASTER_LOCATION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoodsClass[0].DISASTER_NAME)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.GoodsClass[0].GOODSNAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoodsClass[0].QUANTITY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoodsClass[0].IsActive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoodsClass[0].IsAllocated)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.GoodsClass) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DISASTER_LOCATION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DISASTER_NAME)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.GOODSNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QUANTITY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsAllocated)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
