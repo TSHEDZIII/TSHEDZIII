@@ -13,7 +13,8 @@ html {
 }
 
 .heading{
-    font-family:'Ink Free';
+    font-family: Cambria;
+    text-transform:uppercase;
     font-size: 30px;
     color:purple;
 }
