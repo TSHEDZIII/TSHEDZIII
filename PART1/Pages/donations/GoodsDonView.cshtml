@@ -1,6 +1,6 @@
 ﻿
 @model PART1.Pages.donations.GoodsDonViewModel
-<header>
+<header class="heading">
 <div class=" navbar-collapse collapse d-sm-inline-flex justify-content-between">
 
     <ul class="navbar-nav flex-grow-1">
@@ -18,9 +18,9 @@
 </header>
 
 <p class="heading">
-    <a asp-page="Create">Create New</a>
+    <a asp-page="GoodsDon.cshtml">Create New</a>
 </p>
-<table class="table">
+<table class="table label">
     <thead>
         <tr>
             <th>
@@ -49,7 +49,7 @@
                 @Html.DisplayFor(modelItem => item.Number_of_items)
             </td>
             
-            <td>
+                <td class="label">
                 <a asp-page="./Edit" asp-route-id="@item.Date">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.Date">Details</a> |
                 <a asp-page="./Delete" asp-route-id="@item.Date">Delete</a>

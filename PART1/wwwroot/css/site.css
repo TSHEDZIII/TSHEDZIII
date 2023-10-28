@@ -7,15 +7,43 @@ html {
   html {
     font-size: 16px;
   }
-}
+
 .ul{
     display: block;
 }
+.btn-purple {
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+}
+
+    .btn-purple:hover {
+        background-color: white;
+        border: purple;
+        color: purple;
+    }
 
 .heading{
-    font-family:'Ink Free';
+    font-family: Cambria;
+    text-transform:uppercase;
     font-size: 30px;
     color:purple;
+}
+.label {
+    padding:30px;
+    font-family: Cambria;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: purple;
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
