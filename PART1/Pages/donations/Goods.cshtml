@@ -5,14 +5,14 @@
 
 <div class=" navbar-collapse collapse d-sm-inline-flex justify-content-between">
 
-    <ul class="navbar-nav flex-grow-1 ul">
+    <ul class="navbar-nav flex-grow-1 ul heading">
 
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-page="/ChoiceIndex">CHOICE</a>
         </li>
     </ul>
 <</div>
-<div class="row">
+<div class="row label">
     <div class="col-md-10">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -59,13 +59,13 @@
 
 
             <div class="form-group">
-                <input type="submit" value="ALLOCATE" class="btn btn-primary" />
+                <input type="submit" value="ALLOCATE" class="btn-purple" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
+<div class="heading">
     <a asp-page="LOGINDEX">Exit</a>
 </div>
 

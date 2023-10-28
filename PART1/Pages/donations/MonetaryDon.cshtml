@@ -20,7 +20,7 @@
 </header>
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 label">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -37,13 +37,13 @@
                 <span asp-validation-for="MonetaryDonation.Amount" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn-purple" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
+<div class="label">
     <a asp-page="LOGINDEX">EXIT</a>
 </div>
 

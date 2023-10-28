@@ -1,6 +1,6 @@
 ﻿
 @model PART1.Pages.donations.MoneyDonViewModel
-<header>
+<header class="heading">
     <div class=" navbar-collapse collapse d-sm-inline-flex justify-content-between">
     
     <ul class="navbar-nav flex-grow-1">
@@ -10,13 +10,13 @@
     </li>
 
     <li class="nav-item">
-        <a class="heading" asp-area="" asp-page="/ChoiceIndex">CHOICES</a>
+        <a  asp-area="" asp-page="/ChoiceIndex">CHOICES</a>
     </li>
     </ul>
     </div>
 </header>
 <hr />
-<table class="table">
+<table class="table label">
     <thead>
         <tr>
             <th>
@@ -40,7 +40,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Amount)
             </td>
-            <td>
+                <td class="label">
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
                 <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
