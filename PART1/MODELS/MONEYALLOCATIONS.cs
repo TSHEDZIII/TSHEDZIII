@@ -18,17 +18,15 @@ namespace PART1.MODELS
             [Required]
 
             public string ALLOCATE_FUNDS { get; set; }
-             
-        
-
+        [Required]
         public bool IsActive { get; set; }
     }
        
     
     class Disaster
     {
-        
-        
+
+        [Required]
         public bool IsActive { get; set; }
     }
 

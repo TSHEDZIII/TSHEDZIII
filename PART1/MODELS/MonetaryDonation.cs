@@ -10,11 +10,7 @@ namespace PART1.MODELS
 
 
         [Required(ErrorMessage = "Date is required")]
-        public DateTime Date { get; set; }
-
-        
-
-     
+        public DateTime Date { get; set; }    
          [Required(ErrorMessage = "Amount is required")]
         public string Amount { get; set; }
 

@@ -9,26 +9,23 @@ namespace PART1.MODELS
         [Key]
         public int ID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "location is required")]
         public string DISASTER_LOCATION { get; set; }
-        [Required]
-
+        [Required(ErrorMessage = "name is required")]
         public string DISASTER_NAME { get; set; }
-        [Required]
 
-        
-
-
+        [Required(ErrorMessage = "good name is required")]
         public string GOODSNAME { get; set; }
-
+        [Required(ErrorMessage = "quantity is required")]
         public int QUANTITY { get; set; }
-
+        [Required]
         public bool IsActive { get; set; }
-
+        [Required]
         public bool IsAllocated { get; set; }
     }
     class Disasters
     {
+        [Required]
         public string DISASTER_LOCATION { get; set; }
         [Required]
 

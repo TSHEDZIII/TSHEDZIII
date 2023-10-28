@@ -4,31 +4,31 @@
 <h4 class="heading">REGISTER for an Account</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 label">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="REGISTER.NAME" class="control-label"></label>
+                <label asp-for="REGISTER.NAME" class="control-label">Enter name:</label>
                 <input asp-for="REGISTER.NAME" class="form-control" />
                 <span asp-validation-for="REGISTER.NAME" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="REGISTER.SURNAME" class="control-label"></label>
+                <label asp-for="REGISTER.SURNAME" class="control-label">Enter Surname:</label>
                 <input asp-for="REGISTER.SURNAME" class="form-control" />
                 <span asp-validation-for="REGISTER.SURNAME" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="REGISTER.USERNAME" class="control-label"></label>
+                <label asp-for="REGISTER.USERNAME" class="control-label">Enter Username:</label>
                 <input asp-for="REGISTER.USERNAME" class="form-control" />
                 <span asp-validation-for="REGISTER.USERNAME" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="REGISTER.PASSWORD" class="control-label"></label>
+                <label asp-for="REGISTER.PASSWORD" class="control-label">Enter password:</label>
                 <input asp-for="REGISTER.PASSWORD" class="form-control" />
                 <span asp-validation-for="REGISTER.PASSWORD" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="REGISTER" class="btn btn-primary" />
+                <input type="submit" value="REGISTER" class="btn-purple" />
             </div>
         </form>
     </div>
