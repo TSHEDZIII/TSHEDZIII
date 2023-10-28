@@ -14,7 +14,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="LOGIN.PASSWORD" class="control-label">Enter password:</label>
-                <input asp-for="LOGIN.PASSWORD" class="form-control" />
+                <input asp-for="LOGIN.PASSWORD" class="form-control" type="password" />
                 <span asp-validation-for="LOGIN.PASSWORD" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -24,7 +24,7 @@
     </div>
 </div>
 
-<div>
+<div class="label">
     <a asp-page="REGIndex">Don't have an Account? Register here</a>
 </div>
 

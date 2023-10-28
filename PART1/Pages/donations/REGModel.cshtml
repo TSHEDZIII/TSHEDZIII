@@ -24,7 +24,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="REGISTER.PASSWORD" class="control-label">Enter password:</label>
-                <input asp-for="REGISTER.PASSWORD" class="form-control" />
+                <input asp-for="REGISTER.PASSWORD" class="form-control" type="password"/>
                 <span asp-validation-for="REGISTER.PASSWORD" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -34,8 +34,8 @@
     </div>
 </div>
 
-<div>
-    <a asp-page="login.cshtml">Back to List</a>
+<div class="label">
+    <a asp-page="login.cshtml">Aready have an Account? LOGIN</a>
 </div>
 
 @section Scripts {
