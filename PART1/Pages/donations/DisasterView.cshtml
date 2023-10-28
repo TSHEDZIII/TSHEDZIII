@@ -1,16 +1,21 @@
 ﻿
 @model PART1.Pages.donations.DisasterViewModel
 
-<p>
+<p class="heading">
     <a asp-page="Create">Create New</a>
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-page="/DisasterIndex">DISASTER</a>
-
-    </li>
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-page="/ChoiceIndex">CHOICE</a>
-    </li>
 </p>
+<div class=" navbar-collapse collapse d-sm-inline-flex justify-content-between">
+    <ul class="heading ul">
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-page="/DisasterIndex">DISASTER</a>
+
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-page="/ChoiceIndex">CHOICE</a>
+        </li>
+</ul></div>
+    
+
 <table class="table">
     <thead>
         <tr>

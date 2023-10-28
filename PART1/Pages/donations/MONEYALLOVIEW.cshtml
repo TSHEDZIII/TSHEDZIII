@@ -1,8 +1,8 @@
 ﻿@page
 @model PART1.Pages.donations.MONEYALLOVIEWModel
 
-<p>
-    <a asp-page="Create">Create New</a>
+<p class="heading">
+    <a asp-page="Create">Create New money Allocation</a>
 </p>
 <table class="table">
     <thead>
@@ -19,10 +19,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.MONEYALLOCATIONS[0].IsActive)
             </th>
-
-            
-
-            <th></th>
         </tr>
     </thead>
     <tbody>

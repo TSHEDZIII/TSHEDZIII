@@ -1,27 +1,23 @@
 ﻿
 @model PART1.Pages.donations.GoodsModel
 
-<h4>GoodsClass</h4>
+<h4 class="heading">GoodsClass</h4>
 
 <div class=" navbar-collapse collapse d-sm-inline-flex justify-content-between">
 
-    <ul class="navbar-nav flex-grow-1">
-        <li class="nav-item">
-
-        </li>
-
+    <ul class="navbar-nav flex-grow-1 ul">
 
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-page="/ChoiceIndex">CHOICE</a>
         </li>
-
-<hr />
+    </ul>
+<</div>
 <div class="row">
     <div class="col-md-10">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="GoodsClass.DISASTER_LOCATION" class="control-label"></label>
+                <label asp-for="GoodsClass.DISASTER_LOCATION" class="control-label">DISASTER LOCATION</label>
                 <input asp-for="GoodsClass.DISASTER_LOCATION" class="form-control" />
                 <span asp-validation-for="GoodsClass.DISASTER_LOCATION" class="text-danger"></span>
             </div>
@@ -29,24 +25,20 @@
 
 
             <div class="form-group">
-                <label asp-for="GoodsClass.DISASTER_NAME" class="control-label"></label>
+                <label asp-for="GoodsClass.DISASTER_NAME" class="control-label">DISASTER NAME</label>
                 <input asp-for="GoodsClass.DISASTER_NAME" class="form-control" />
                 <span asp-validation-for="GoodsClass.DISASTER_NAME" class="text-danger"></span>
             </div>
 
-
-
-
-
             <div class="form-group">
-                <label asp-for="GoodsClass.GOODSNAME" class="control-label"></label>
+                <label asp-for="GoodsClass.GOODSNAME" class="control-label">Name of a good that you are donating</label>
                 <input asp-for="GoodsClass.GOODSNAME" class="form-control" />
                 <span asp-validation-for="GoodsClass.GOODSNAME" class="text-danger"></span>
             </div>
 
 
             <div class="form-group">
-                <label asp-for="GoodsClass.QUANTITY" class="control-label"></label>
+                <label asp-for="GoodsClass.QUANTITY" class="control-label">How many items are you donating?</label>
                 <input asp-for="GoodsClass.QUANTITY" class="form-control" />
                 <span asp-validation-for="GoodsClass.QUANTITY" class="text-danger"></span>
             </div>
@@ -74,7 +66,7 @@
 </div>
 
 <div>
-    <a asp-page="LOGINDEX">LOGIN</a>
+    <a asp-page="LOGINDEX">Exit</a>
 </div>
 
 @section Scripts {

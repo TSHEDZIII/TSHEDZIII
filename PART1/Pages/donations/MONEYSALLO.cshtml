@@ -1,45 +1,35 @@
 ﻿
 @model PART1.Pages.donations.MONEYSALLOModel
-
-<h4>MONEYALLOCATIONS</h4>
+<header>
+<h4 class="heading">MONEYALLOCATIONS</h4>
 <div class=" navbar-collapse collapse d-sm-inline-flex justify-content-between">
 
     <ul class="navbar-nav flex-grow-1">
         <li class="nav-item">
-
+            <a class="heading" asp-area="" asp-page="/ChoiceIndex">CHOICES</a>
         </li>
-
-
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-page="/ChoiceIndex">CHOICE</a>
-        </li>
-
-
-
-
-
+    </ul>
 </div>
 </header>
+
 <hr />
+
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="MONEYALLOCATIONS.DISASTER_LOCATION" class="control-label"></label>
+                <label asp-for="MONEYALLOCATIONS.DISASTER_LOCATION" class="control-label">Enter DISASTER LOCATION</label>
                 <input asp-for="MONEYALLOCATIONS.DISASTER_LOCATION" class="form-control" />
                 <span asp-validation-for="MONEYALLOCATIONS.DISASTER_LOCATION" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MONEYALLOCATIONS.DISASTER_DESCRIPTION" class="control-label"></label>
+                <label asp-for="MONEYALLOCATIONS.DISASTER_DESCRIPTION" class="control-label">Enter DISASTER DESCRIPTION</label>
                 <input asp-for="MONEYALLOCATIONS.DISASTER_DESCRIPTION" class="form-control" />
                 <span asp-validation-for="MONEYALLOCATIONS.DISASTER_DESCRIPTION" class="text-danger"></span>
             </div>
-
-            
-
             <div class="form-group">
-                <label asp-for="MONEYALLOCATIONS.ALLOCATE_FUNDS" class="control-label"></label>
+                <label asp-for="MONEYALLOCATIONS.ALLOCATE_FUNDS" class="control-label">Enter ALLOCATE FUNDS</label>
                 <input asp-for="MONEYALLOCATIONS.ALLOCATE_FUNDS" class="form-control" />
                 <span asp-validation-for="MONEYALLOCATIONS.ALLOCATE_FUNDS" class="text-danger"></span>
             </div>
@@ -56,7 +46,7 @@
 </div>
 
 <div>
-    <a asp-page="LOGINDEX">LOGIN</a>
+    <a asp-page="LOGINDEX">EXIT</a>
 </div>
 
 @section Scripts {
