@@ -1,11 +1,15 @@
 html {
-  font-size: 14px;
+  font-size: 16px;
+  background-color:darkorange;
 }
 
 @media (min-width: 768px) {
   html {
     font-size: 16px;
   }
+}
+.ul{
+    display: block;
 }
 
 .heading{
